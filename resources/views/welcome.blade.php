@@ -20,6 +20,8 @@
             
             <div class="max-w-7xl mx-auto p-6 lg:p-8">
                 <h3 class="text-center text-xl font-semibold text-gray-900 dark:text-white">Cursos de Programación</h3>
+                <p class="text-center text-sm text-gray-600 dark:text-gray-400"> {{$user->name}} </p>
+                <p class="text-center text-sm text-gray-600 dark:text-gray-400"> {{$user->email}} </p>
             </div>
         </div>
     </body>

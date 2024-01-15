@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -15,6 +16,13 @@ class UserController extends Controller
         // Para hacer un var_dump en laravel
         // dd($user_id);
 
-        return view('welcome');
+        // SELECT * FROM users;
+        // dd( User::all() );
+
+        // SELECT * FROM users WHERE id = 1;
+        $user = User::find($user_id);
+        // dd($user);
+
+        return view('welcome', ['user' => $user]);
     }
 }
